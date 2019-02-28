@@ -1,0 +1,322 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+        
+
+        <div id="main-body-content">
+            <div id="home" class="body-div main-body-content-div">
+                <div>
+                    <h2 class="title" >Children’s School Lives (CSL)</h2>
+                    <div id="home-image-text">
+                        <img src="{% static '/Images/CSL_logo2_stacked_col_IRISH.jpg' %}"/>
+                        <p>
+                            Children’s School Lives (CSL) is an exciting new national longitudinal cohort study of primary schooling in Ireland. Launched on October 25th, the study will follow approximately 4,300 children through their primary school years. Using surveys and interviews with children, teachers and parents, as well as classroom observations, this ground-breaking study will provide rich and insightful pictures of children’s experiences in primary schools in Ireland. The study will also show how these experiences both shape and are shaped by schools as communities, institutions, and as a system.
+
+                            Research plays a central role in all NCCA’s curriculum development work at early childhood, primary and post-primary. Children’s experiences, and the perspectives of their teachers, school management and parents on what happens in schools, are an important part of connecting practice with national policy. Aptly titled, Children’s School Lives, the study will inform the NCCA’s work in reviewing and updating the primary curriculum to ensure it continues to provide a strong foundation for teaching and learning. The findings will likely also be useful to schools in reviewing and further developing their own policies and practices.  
+
+                            The study will be carried out by University College Dublin with the first wave of data-gathering due to begin in Q1, 2019.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="about">
+                <div id="about-box" class="body-div">
+                    <h2 class="title" >Children’s School Lives (CSL)</h2>
+                    <h4 class="title" id="sub-heading">"National longitudinal cohort study of primary schooling in Ireland"</h4>
+                    <p>
+                        Children's School Lives is a new longitudinal study commissioned by the National Council for Curriculum and Assessment (NCCA) and conducted by UCD School of Education. The study will explore the lived experiences of children in Irish primary schools from Spring 2019 to Spring 2024, providing Ireland’s first nationally representative study of primary schooling. Following over 4000 children as they transition into, through and out of over 200 primary schools across a 6-year period, the study will involve two age cohorts – those in second class and those in their final year of pre-school in 2019. The study will track and record the children’s progress and explore issues related to their learning, well-being, engagement, diversities and belonging, as well as the factors that influence this in their homes and local communities, in their classrooms and in their schools.  
+
+                        Providing an in-depth and comprehensive overview of policy and practice in our primary schools, this landmark study will will feed directly into the NCCA’s work on curriculum and assessment as well as inform wider educational discourse, policy development and practice. Furthemore, the study will inform the NCCA’s work in reviewing and updating the primary curriculum to ensure it continues to provide a strong foundation for teaching and learning.
+
+                        The study’s core management team includes Professor Dympna Devine (Principal Investigator) and Assistant Professor Jennifer Symonds (Co-PI) along with Assistant Professor Seaneen Sloan (Co- Investigator) and Assistant Professor Deirdre McGillicuddy. The Management and Research teams are further supported by
+                    </p>
+
+                    <ul>
+                        <li>a Steering Committee</li>
+                        <li>a Children’s Advisory Panel</li>
+                        <li>an Adult Stakeholder Panel</li>
+                        <li>an International Advisory Panel</li>
+                    </ul>
+                    <p>
+                        The study will use a cross-sequential longitudinal design, producing a rich set of mixed methods data. This will be generated through a quantitative multi-informant study involving repeated measures surveys of children, teachers and parents in each school context and a social network analysis across school transition. The qualitative component of the study will involve interviews with children, teachers, parents and grandparents, and ethnographic observation of children’s learning and wellbeing in classroom contexts. The study will also include an extensive set of objective quantitative data such as systematic observation of pedagogy and records of school structures and procedures from school principals and researchers.
+                    </p>
+                </div>
+            </div>
+            
+            <div id="staff">
+                <div class="body-div" id="staff-div">
+                    <h2 class="title white-title">Staff</h2>
+                    <div id="staff-profiles">
+                        
+                        {% for employee in Employees %}
+                        <div class="staff-profile">
+                            <img src="{{ employee.profile_pic.url }}"/>
+                            <h4 class="staff-name">{{ employee.first_name }} {{employee.last_name}}</h4>
+                            <h4 class="staff-job">{{ employee.job_title }}</h4>
+                            <i class="fab fa-linkedin linkedin">{{ employee.social_media_Link }}</i><br>
+                            <button>Contact</button>
+                        </div>
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div id="themes">
+            
+            </div>
+            
+            <div id="cohorts">
+            
+            </div>
+            
+            <div id="child-safeguarding">
+            
+            </div>
+            
+            <div id="partners">
+            
+            </div>
+            
+            <div id="governance-and-consultation">
+            
+            </div>
+            
+            <div id="recruitment" class="main-body-content-div">
+                <div class="body-div" id="recruitment-div">
+                    <h2 class="title white-title">Recruitment</h2>
+                    
+                    <div id="recruitment-empty">
+                        <h2 class="title">Sorry there seems to be no jobs available</h2>
+                        <h5>Sign up to our news letter to get the latest jobs available</h5>
+                        <form>
+                            <input type="text">
+                            <button>JOIN</button>
+                        </form>
+                    </div>
+                    
+                    
+                    <div id="recruitment-container">
+                        
+                        <div class="recruitment-box">
+                            <h2>Role: Research fieldworker</h2>
+                            <div class="location-div">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h5>Primary schools or preschools across the Republic of Ireland</h5>
+                            </div>
+                            <h5>Closing date: Friday 4th of January</h5>
+                            <div class="recruitment-about-requirements-box">
+                                <h5>About</h5>
+                                <h5>Requirements</h5>
+                            </div>
+                            <!--
+                            <p>
+                                The Children’s School Lives Study
+
+                                Funded by the National Council for Curriculum and Assessment (NCCA), the Children’s School Lives study is a landmark study of primary schooling in Ireland being conducted by UCD School of Education. The study will follow 4,400 children for six-years to capture their school experiences.
+
+
+
+                                We are seeking people with appropriate experience to assist with fieldwork in April/May 2019, with the possibility of assisting again in September 2019 and annually in April/May until 2024. This will involve arranging and carrying out visits to preschools/primary schools to:
+
+                                Conduct a set of data collection activities with children using electronic tablets, laptops, or paper questionnaires. These may be individual assessments or whole class activities supported by the class teacher, depending on the age of the children
+                                Observe the children’s surroundings in preschools
+                                Observe some of the children learning in primary schools.
+
+
+                                Each fieldworker will be responsible for a caseload of schools according to geographic location and availability. Full training and support will be provided by the Children’s School Lives team.
+                            </p>
+
+                            <p>
+                                To apply for this role, you will need to:
+
+                                Have good working knowledge of primary schools and/or pre-schools, for example as a teacher, school principal or similar professional role working with children, for example in day cares, youth services, out-of-school activity centres, or as a social worker, educational psychologist, school guidance counsellor or school completion officer. Students at masters/doctoral level in these fields will also be considered. Experienced/retired teachers, those on career break or job sharing especially welcome
+                                Be available to participate in fieldworker training in March 2019. This will be conducted either remotely or in person
+                                Have availability during the school day throughout data collections periods
+                                Have excellent organisational and record keeping skills
+                                Have an excellent standard of written and spoken English
+                                Have a current PPS number
+                                Have a full driving licence and access to a car, and be prepared to travel to each school site (between 30 minutes to 1.5 hours each way, as an estimate)
+                                Have a current Garda vetting certificate or be prepared to undergo Garda vetting as a condition of employment.
+                                The rate of pay is commensurate with professional qualification and experience, with details given on successful application.
+
+                                To apply please complete and submit the Children’s School Lives fieldworker application form by the 4th of January 2019.Shortlisted candidates will be contacted by email in early January to arrange an interview over telephone or Skype.
+
+                                For further information or queries please contact csl@ucd.ie.
+
+                                 Research Fieldworker PDF
+                            </p>
+                            -->
+                        </div>
+                        
+                        <div class="recruitment-box">
+                            <h2>Role: Research fieldworker</h2>
+                            <div class="location-div">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h5>Primary schools or preschools across the Republic of Ireland</h5>
+                            </div>
+                            <h5>Closing date: Friday 4th of January</h5>
+                            <div class="recruitment-about-requirements-box">
+                                <h5>About</h5>
+                                <h5>Requirements</h5>
+                            </div>
+                            <!--
+                            <p>
+                                The Children’s School Lives Study
+
+                                Funded by the National Council for Curriculum and Assessment (NCCA), the Children’s School Lives study is a landmark study of primary schooling in Ireland being conducted by UCD School of Education. The study will follow 4,400 children for six-years to capture their school experiences.
+
+
+
+                                We are seeking people with appropriate experience to assist with fieldwork in April/May 2019, with the possibility of assisting again in September 2019 and annually in April/May until 2024. This will involve arranging and carrying out visits to preschools/primary schools to:
+
+                                Conduct a set of data collection activities with children using electronic tablets, laptops, or paper questionnaires. These may be individual assessments or whole class activities supported by the class teacher, depending on the age of the children
+                                Observe the children’s surroundings in preschools
+                                Observe some of the children learning in primary schools.
+
+
+                                Each fieldworker will be responsible for a caseload of schools according to geographic location and availability. Full training and support will be provided by the Children’s School Lives team.
+                            </p>
+
+                            <p>
+                                To apply for this role, you will need to:
+
+                                Have good working knowledge of primary schools and/or pre-schools, for example as a teacher, school principal or similar professional role working with children, for example in day cares, youth services, out-of-school activity centres, or as a social worker, educational psychologist, school guidance counsellor or school completion officer. Students at masters/doctoral level in these fields will also be considered. Experienced/retired teachers, those on career break or job sharing especially welcome
+                                Be available to participate in fieldworker training in March 2019. This will be conducted either remotely or in person
+                                Have availability during the school day throughout data collections periods
+                                Have excellent organisational and record keeping skills
+                                Have an excellent standard of written and spoken English
+                                Have a current PPS number
+                                Have a full driving licence and access to a car, and be prepared to travel to each school site (between 30 minutes to 1.5 hours each way, as an estimate)
+                                Have a current Garda vetting certificate or be prepared to undergo Garda vetting as a condition of employment.
+                                The rate of pay is commensurate with professional qualification and experience, with details given on successful application.
+
+                                To apply please complete and submit the Children’s School Lives fieldworker application form by the 4th of January 2019.Shortlisted candidates will be contacted by email in early January to arrange an interview over telephone or Skype.
+
+                                For further information or queries please contact csl@ucd.ie.
+
+                                 Research Fieldworker PDF
+                            </p>
+                            -->
+                        </div>
+                        
+                        <div class="recruitment-box">
+                            <h2>Role: Research fieldworker</h2>
+                            <div class="location-div">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h5>Primary schools or preschools across the Republic of Ireland</h5>
+                            </div>
+                            <h5>Closing date: Friday 4th of January</h5>
+                            <div class="recruitment-about-requirements-box">
+                                <h5>About</h5>
+                                <h5>Requirements</h5>
+                            </div>
+                            <!--
+                            <p>
+                                The Children’s School Lives Study
+
+                                Funded by the National Council for Curriculum and Assessment (NCCA), the Children’s School Lives study is a landmark study of primary schooling in Ireland being conducted by UCD School of Education. The study will follow 4,400 children for six-years to capture their school experiences.
+
+
+
+                                We are seeking people with appropriate experience to assist with fieldwork in April/May 2019, with the possibility of assisting again in September 2019 and annually in April/May until 2024. This will involve arranging and carrying out visits to preschools/primary schools to:
+
+                                Conduct a set of data collection activities with children using electronic tablets, laptops, or paper questionnaires. These may be individual assessments or whole class activities supported by the class teacher, depending on the age of the children
+                                Observe the children’s surroundings in preschools
+                                Observe some of the children learning in primary schools.
+
+
+                                Each fieldworker will be responsible for a caseload of schools according to geographic location and availability. Full training and support will be provided by the Children’s School Lives team.
+                            </p>
+
+                            <p>
+                                To apply for this role, you will need to:
+
+                                Have good working knowledge of primary schools and/or pre-schools, for example as a teacher, school principal or similar professional role working with children, for example in day cares, youth services, out-of-school activity centres, or as a social worker, educational psychologist, school guidance counsellor or school completion officer. Students at masters/doctoral level in these fields will also be considered. Experienced/retired teachers, those on career break or job sharing especially welcome
+                                Be available to participate in fieldworker training in March 2019. This will be conducted either remotely or in person
+                                Have availability during the school day throughout data collections periods
+                                Have excellent organisational and record keeping skills
+                                Have an excellent standard of written and spoken English
+                                Have a current PPS number
+                                Have a full driving licence and access to a car, and be prepared to travel to each school site (between 30 minutes to 1.5 hours each way, as an estimate)
+                                Have a current Garda vetting certificate or be prepared to undergo Garda vetting as a condition of employment.
+                                The rate of pay is commensurate with professional qualification and experience, with details given on successful application.
+
+                                To apply please complete and submit the Children’s School Lives fieldworker application form by the 4th of January 2019.Shortlisted candidates will be contacted by email in early January to arrange an interview over telephone or Skype.
+
+                                For further information or queries please contact csl@ucd.ie.
+
+                                 Research Fieldworker PDF
+                            </p>
+                            -->
+                        </div>
+                        
+                        <div class="recruitment-box">
+                            <h2>Role: Research fieldworker</h2>
+                            <div class="location-div">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h5>Primary schools or preschools across the Republic of Ireland</h5>
+                            </div>
+                            <h5>Closing date: Friday 4th of January</h5>
+                            <div class="recruitment-about-requirements-box">
+                                <h5>About</h5>
+                                <h5>Requirements</h5>
+                            </div>
+                            <!--
+                            <p>
+                                The Children’s School Lives Study
+
+                                Funded by the National Council for Curriculum and Assessment (NCCA), the Children’s School Lives study is a landmark study of primary schooling in Ireland being conducted by UCD School of Education. The study will follow 4,400 children for six-years to capture their school experiences.
+
+
+
+                                We are seeking people with appropriate experience to assist with fieldwork in April/May 2019, with the possibility of assisting again in September 2019 and annually in April/May until 2024. This will involve arranging and carrying out visits to preschools/primary schools to:
+
+                                Conduct a set of data collection activities with children using electronic tablets, laptops, or paper questionnaires. These may be individual assessments or whole class activities supported by the class teacher, depending on the age of the children
+                                Observe the children’s surroundings in preschools
+                                Observe some of the children learning in primary schools.
+
+
+                                Each fieldworker will be responsible for a caseload of schools according to geographic location and availability. Full training and support will be provided by the Children’s School Lives team.
+                            </p>
+
+                            <p>
+                                To apply for this role, you will need to:
+
+                                Have good working knowledge of primary schools and/or pre-schools, for example as a teacher, school principal or similar professional role working with children, for example in day cares, youth services, out-of-school activity centres, or as a social worker, educational psychologist, school guidance counsellor or school completion officer. Students at masters/doctoral level in these fields will also be considered. Experienced/retired teachers, those on career break or job sharing especially welcome
+                                Be available to participate in fieldworker training in March 2019. This will be conducted either remotely or in person
+                                Have availability during the school day throughout data collections periods
+                                Have excellent organisational and record keeping skills
+                                Have an excellent standard of written and spoken English
+                                Have a current PPS number
+                                Have a full driving licence and access to a car, and be prepared to travel to each school site (between 30 minutes to 1.5 hours each way, as an estimate)
+                                Have a current Garda vetting certificate or be prepared to undergo Garda vetting as a condition of employment.
+                                The rate of pay is commensurate with professional qualification and experience, with details given on successful application.
+
+                                To apply please complete and submit the Children’s School Lives fieldworker application form by the 4th of January 2019.Shortlisted candidates will be contacted by email in early January to arrange an interview over telephone or Skype.
+
+                                For further information or queries please contact csl@ucd.ie.
+
+                                 Research Fieldworker PDF
+                            </p>
+                            -->
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div id="contact">
+            
+            </div>
+            
+            <div id="media">
+            
+            </div>
+                        
+        </div>
+        
+    
+            
+{% endblock %}
