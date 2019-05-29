@@ -2,33 +2,84 @@
 {% load staticfiles %}
 {% block content %}
 
-            <div id="new-data-release">
-            
+<!--        <div id="submenu-toggle">submenu<i class="material-icons">menu</i></div>-->
+        <div class="about-submenu" >
+            <a href="#questionnaires">Questionnaires</a>
+            <a href="#qualitative-data">Qualitative data</a>
+            <a href="#accessing-CSL-data">Accessing CSL data</a>
+            <a href="#data-manuals-and-technical-reports">Data manuals and technical reports</a>
+        </div>
+        
+        <div id="questionnaires" class="IFR"> 
+            <h2 class="title-IFR">Questionnaires</h2>
+            <div class="PDF-block">
+                
+                <div class="PDF-download">
+                    <div>
+                        <i class="far fa-file-pdf"></i>
+                    </div>
+                    <div class="PDF-title-authors">
+                        <h3>06-Young-Person-Supplementary-17_18-years.pdf</h3>
+                        <h5>Dr.John Doe • Dr.Jane Doe</h5>
+                    </div>
+                    <div><i class="material-icons download-button">get_app</i></div>
+                </div>
+                
+                <div class="PDF-download">
+                    <div>
+                        <i class="far fa-file-pdf"></i>
+                    </div>
+                    <div class="PDF-title-authors">
+                        <h3>06-Young-Person-Supplementary-17_18-years.pdf</h3>
+                        <h5>Dr.John Doe • Dr.Jane Doe</h5>
+                    </div>
+                    <div><i class="material-icons download-button">get_app</i></div>
+                </div>
+                
+                <div class="PDF-download">
+                    <div>
+                        <i class="far fa-file-pdf"></i>
+                    </div>
+                    <div class="PDF-title-authors">
+                        <h3>06-Young-Person-Supplementary-17_18-years.pdf</h3>
+                        <h5>Dr.John Doe • Dr.Jane Doe</h5>
+                    </div>
+                    <div><i class="material-icons download-button">get_app</i></div>
+                </div>
+                
             </div>
-            
-            <div id="questionnaires">
-            
+        </div>
+
+        <div id="qualitative-data" class="IFR">
+            <h2 class="title-IFR">Qualitative Data</h2>
+            <div class="coming-soon-box"><h2>COMING SOON</h2></div>
+        </div>
+
+        <div id="accessing-CSL-data" class="IFR">
+            <h2 class="title-IFR">Acessing CSL data</h2>
+            <div class="coming-soon-box"><h2>COMING SOON</h2></div>
+        </div>
+
+        <div id="data-manuals-and-technical-reports" class="IFR">
+            <h2 class="title-IFR">Data manuels and technical reports</h2>
+            <div class="coming-soon-box"><h2>COMING SOON</h2></div>
+        </div>
+
+        
+        <div id="map-data" class="IFR">
+            <h2 class="title-IFR">Where our data comes from</h2>
+            <div class="jsmaps-wrapper" id="ireland-map"></div>
+
+            <div id="map-rep">
+                <span id="Connacht"></span><h5>1234 Schools in Connacht</h5><br>
+                <span id="Leinster"></span><h5>1234 Schools in Leinster</h5><br>
+                <span id="Munster"></span><h5>1234 Schools in Munster</h5><br>
+                <span id="Ulster"></span><h5>1234 Schools in Ulster</h5><br>
+                <span id="Selected"></span><h5>Currently selected</h5><br>
             </div>
-            
-            <div id="qualitative-data">
-            
-            </div>
-            
-            <div id="accessing-CSL-data">
-            
-            </div>
-            
-            <div id="data-manuals-and-technical-reports">
-            
-            </div>
-            
-            <div id="data-confidentiality">
-            
-            </div>
-            
-            <div id="useful-links-for-researchers">
-            
-            </div>
+        </div>
+    
+
     
             
 {% endblock %}

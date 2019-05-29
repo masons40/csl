@@ -19,3 +19,6 @@ def InformationforParticipants(request):
 
 def InformationforResearchers(request):
 	return render(request, "InformationforResearchers.html", {})
+
+def PV(request):
+	return render(request, "PeopleAndVacancies.html", {})

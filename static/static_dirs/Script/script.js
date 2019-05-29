@@ -34,5 +34,12 @@ $("document").ready(function(){
     
     
 
+    $('#menu-test').click(function(){
+       $('#test-menu').slideToggle();
+    });
+    
+    $("#menu-cross").click(function(){
+       $('#test-menu').slideToggle();
+    });
     
 })

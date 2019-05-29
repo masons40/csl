@@ -1,3 +1,4 @@
+
 var slideIndex = 1;
 
     showDivs(slideIndex);
@@ -26,4 +27,3 @@ var slideIndex = 1;
       dots[slideIndex-1].className += " w3-white";
     
     }
-
