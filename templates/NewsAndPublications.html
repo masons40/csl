@@ -49,20 +49,21 @@
                 <div class="body-div" id="news-div">
                     <h2 class="title">News</h2>
                     <div class="news-articles">
-                        
+                        {% for article in news_articles %}
                         <div class="news-article">
                             <img src="{% static 'Images/news-bg2.jpg' %}"/>
                             <div class="news-article-info-box">
-                                <h4>Independent Article</h4>
+                                <h4>{{ article.news_article_company }}</h4>
                             </div>
                             <i class="far fa-newspaper news-icon"></i>
                             <div class="title-view">
-                                <h4>Study of 4,300 primary pupils...</h4>
-                                <a href="https://www.independent.ie/irish-news/education/study-of-4300-primary-pupils-to-gain-insights-about-improving-curriculum-37460366.html">Read more...</a>
+                                <h4>{{ article.title }}</h4>
+                                <a href="{{ article.news_article_url }}">Read more...</a>
                             </div>
                             <div class="news-overlay"></div>
                         </div>
-                        
+                        {% endfor %}
+<!--
                         <div class="news-article">
                             <img src="{% static 'Images/news-bg2.jpg' %}"/>
                             <div class="news-article-info-box">
@@ -101,6 +102,7 @@
                             </div>
                             <div class="news-overlay"></div>
                         </div>
+-->
                         
                     </div>
                 </div>

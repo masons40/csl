@@ -1,18 +1,32 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load customfilters %}
 {% block content %}    
         
         <div id="staff">
             <div class="body-div" id="staff-div">
                 <h2 class="title">Staff</h2>
                 <div id="staff-profiles">
+                    
+                    {% for employee in Employess %}
                     <div class="staff-profile">
-                        <img src="{% static 'Images/pro_women.jpg' %}"/>
-                        <h4 class="staff-name">Jane Doe</h4>
-                        <h4 class="staff-job">JOB HERE</h4>
+                        <div>
+                            <img src="{{ employee.profile_pic.url }}"/>
+                            <h4 class="staff-name">{{ employee.first_name }} {{ employee.last_name}}</h4>
+                            <h4 class="staff-job">{{ employee.job_title }}</h4>
+                        </div>
+                        <div class="staff-about">
+                            <p>
+                                {{ employee.employee_about_area }}
+                            </p>
+                        </div>
+<!--
                         <i class="fab fa-linkedin linkedin"></i><br>
                         <button>Contact</button>
+-->
                     </div>
+                    {% endfor %}
+                    
                 </div>
             </div>
         </div>
@@ -22,10 +36,11 @@
         </div>
 
         <div id="recruitment" class="main-body-content-div">
-            <img src="{% static 'Images/rec-bg.jpg' %}" />
+<!--            <img src="../Images/rec-bg.jpg" />-->
             <div class="body-div" id="recruitment-div">
-                <h2 class="title-white">Recruitment</h2>
+                <h2 class="title">Recruitment</h2>
 
+<!--
                 <div id="recruitment-empty">
                     <h2 class="title">Sorry there seems to be no jobs available</h2>
                     <h5>Sign up to recieve an email when new jobs become available</h5>
@@ -34,114 +49,50 @@
                         <button>JOIN</button>
                     </form>
                 </div>
-
+-->
+                {% for job in jobposts %}
 
                 <div id="recruitment-container">
-
                     <div class="recruitment-box">
-                        <h2>Role: Research fieldworker</h2>
-                        <div class="location-div">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h5>Primary schools or preschools across the Republic of Ireland</h5>
+                        <div class="recruitment-details-box">
+                            <div class="job-logo">
+                                <div class="job-initials">{{ job.title|InitialCreator}}</div>
+                            </div>
+                            <div class="role-date">
+                                <h3>{{ job.title }}</h3>
+                                <h5>Closing Date: {{ job.data_post_expires }} </h5>
+                            </div>
+                            <div class="job-location">
+                                <h3>Location</h3>
+                                <h5>{{ job.location }}</h5>
+                            </div>
+                            <div class="about-requirements">
+                                {% with jobabout="about"|add:job.id %}
+                                {% with "requirements"|add:job.id as jobrequirements %}
+                                <button class="job-about" data-key="{{ job.id|About }}">About</button>
+                                <button class="job-requirements" data-key="{{ job.id|Requirements }}">Requirements</button>
+                            </div>
                         </div>
-                        <h5>Closing date: Friday 4th of January</h5>
-                        <div class="recruitment-about-requirements-box">
-                            <h5>About</h5>
-                            <h5>Requirements</h5>
+                        
+                        <div class="recruitment-about" data-key="{{ job.id|About }}">
+                            <h3>About</h3>
+                            <p>
+                                {{ job.about }}
+                            </p>
                         </div>
-                        <!--
-                        <p>
-                            The Children’s School Lives Study
-
-                            Funded by the National Council for Curriculum and Assessment (NCCA), the Children’s School Lives study is a landmark study of primary schooling in Ireland being conducted by UCD School of Education. The study will follow 4,400 children for six-years to capture their school experiences.
-
-
-
-                            We are seeking people with appropriate experience to assist with fieldwork in April/May 2019, with the possibility of assisting again in September 2019 and annually in April/May until 2024. This will involve arranging and carrying out visits to preschools/primary schools to:
-
-                            Conduct a set of data collection activities with children using electronic tablets, laptops, or paper questionnaires. These may be individual assessments or whole class activities supported by the class teacher, depending on the age of the children
-                            Observe the children’s surroundings in preschools
-                            Observe some of the children learning in primary schools.
-
-
-                            Each fieldworker will be responsible for a caseload of schools according to geographic location and availability. Full training and support will be provided by the Children’s School Lives team.
-                        </p>
-
-                        <p>
-                            To apply for this role, you will need to:
-
-                            Have good working knowledge of primary schools and/or pre-schools, for example as a teacher, school principal or similar professional role working with children, for example in day cares, youth services, out-of-school activity centres, or as a social worker, educational psychologist, school guidance counsellor or school completion officer. Students at masters/doctoral level in these fields will also be considered. Experienced/retired teachers, those on career break or job sharing especially welcome
-                            Be available to participate in fieldworker training in March 2019. This will be conducted either remotely or in person
-                            Have availability during the school day throughout data collections periods
-                            Have excellent organisational and record keeping skills
-                            Have an excellent standard of written and spoken English
-                            Have a current PPS number
-                            Have a full driving licence and access to a car, and be prepared to travel to each school site (between 30 minutes to 1.5 hours each way, as an estimate)
-                            Have a current Garda vetting certificate or be prepared to undergo Garda vetting as a condition of employment.
-                            The rate of pay is commensurate with professional qualification and experience, with details given on successful application.
-
-                            To apply please complete and submit the Children’s School Lives fieldworker application form by the 4th of January 2019.Shortlisted candidates will be contacted by email in early January to arrange an interview over telephone or Skype.
-
-                            For further information or queries please contact csl@ucd.ie.
-
-                             Research Fieldworker PDF
-                        </p>
-                        -->
+                        
+                        <div class="recruitment-about" data-key="{{ job.id|Requirements }}">
+                            <h3>Requirements</h3>
+                            <p>
+                               {{ job.requirements }}
+                            </p>
+                        </div>
                     </div>
-
-                    <div class="recruitment-box">
-                        <h2>Role: Research fieldworker</h2>
-                        <div class="location-div">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h5>Primary schools or preschools across the Republic of Ireland</h5>
-                        </div>
-                        <h5>Closing date: Friday 4th of January</h5>
-                        <div class="recruitment-about-requirements-box">
-                            <h5>About</h5>
-                            <h5>Requirements</h5>
-                        </div>
-                        <!--
-                        <p>
-                            The Children’s School Lives Study
-
-                            Funded by the National Council for Curriculum and Assessment (NCCA), the Children’s School Lives study is a landmark study of primary schooling in Ireland being conducted by UCD School of Education. The study will follow 4,400 children for six-years to capture their school experiences.
-
-
-
-                            We are seeking people with appropriate experience to assist with fieldwork in April/May 2019, with the possibility of assisting again in September 2019 and annually in April/May until 2024. This will involve arranging and carrying out visits to preschools/primary schools to:
-
-                            Conduct a set of data collection activities with children using electronic tablets, laptops, or paper questionnaires. These may be individual assessments or whole class activities supported by the class teacher, depending on the age of the children
-                            Observe the children’s surroundings in preschools
-                            Observe some of the children learning in primary schools.
-
-
-                            Each fieldworker will be responsible for a caseload of schools according to geographic location and availability. Full training and support will be provided by the Children’s School Lives team.
-                        </p>
-
-                        <p>
-                            To apply for this role, you will need to:
-
-                            Have good working knowledge of primary schools and/or pre-schools, for example as a teacher, school principal or similar professional role working with children, for example in day cares, youth services, out-of-school activity centres, or as a social worker, educational psychologist, school guidance counsellor or school completion officer. Students at masters/doctoral level in these fields will also be considered. Experienced/retired teachers, those on career break or job sharing especially welcome
-                            Be available to participate in fieldworker training in March 2019. This will be conducted either remotely or in person
-                            Have availability during the school day throughout data collections periods
-                            Have excellent organisational and record keeping skills
-                            Have an excellent standard of written and spoken English
-                            Have a current PPS number
-                            Have a full driving licence and access to a car, and be prepared to travel to each school site (between 30 minutes to 1.5 hours each way, as an estimate)
-                            Have a current Garda vetting certificate or be prepared to undergo Garda vetting as a condition of employment.
-                            The rate of pay is commensurate with professional qualification and experience, with details given on successful application.
-
-                            To apply please complete and submit the Children’s School Lives fieldworker application form by the 4th of January 2019.Shortlisted candidates will be contacted by email in early January to arrange an interview over telephone or Skype.
-
-                            For further information or queries please contact csl@ucd.ie.
-
-                             Research Fieldworker PDF
-                        </p>
-                        -->
-                    </div>
-
-                    
                 </div>
+                {% endwith %}
+                {% endwith %}
+                {% endfor %}
+                
             </div>
         </div>
 

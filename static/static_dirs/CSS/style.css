@@ -292,7 +292,7 @@ header img{
 
 
 /*
-********************************************************
+********************************************************ABOUT***********
 */
 
 
@@ -304,12 +304,7 @@ header img{
 #about-front-page{
     width: 70%;
     padding: 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #ffffff;
-    -webkit-box-shadow: -31px 40px 51px -25px #b8509f9c, -11px 16px 51px -25px #584270;
-    border-radius: 10px;
-    -moz-box-shadow: -31px 40px 51px -25px #b8509f9c, -11px 16px 51px -25px #584270;
-    box-shadow: -31px 40px 51px -25px #b8509f9c, -11px 16px 51px -25px #584270;
+    background-color: white;
     margin: 0 auto;
     font-family:'Open sans condensed', sans-serif;
 }
@@ -330,15 +325,57 @@ header img{
 #about-extra-box-div{
     width:70%;
     margin: 0 auto;
+    font-family: 'Open sans condensed', sans-serif;
+    font-size:1em;
 }
-
+#about-extra-box-div ul{
+    width:90%;
+    margin: 0 auto;
+}
 #about-extra-box-div div{
     padding:5px;
     width:auto;
     margin: 0 auto;
 }
 
+#work-packages{
+    width:70%;
+    margin: 0 auto;
+    text-align: center;
+}
 
+#work-packages img {
+    width:45%;
+}
+
+#themes{
+    width:100%;
+    margin: 0 auto;
+    font-family: 'Abel';
+    text-align: left;
+}
+
+#themes div{
+    background-color: #f3f3f3;
+    padding: 3px 30px;
+    margin: 15px;
+}
+
+
+#ethics-GDPR div{
+    font-family: 'Abel';
+    width:70%;
+    margin: 20px auto;
+}
+
+#ethics-GDPR div h3{
+    font-weight: 700;
+}
+
+#ethics-GDPR div ul{
+    width:90%;
+    margin: 0 auto;
+}
 
 .linkedin{
     color: #0274b3;
@@ -347,11 +384,9 @@ header img{
 /*
 *******************************************************NEWS*******************
 */
-#launch{
-    width:70%;
-    background-color: #80808017;
+#launch {
+    width: 70%;
     border-radius: 5px;
-    box-shadow: 0px 0px 7px -2px #00000061;
     margin: 0px auto;
 }
 #launch div{
@@ -390,16 +425,14 @@ header img{
     font-size: 5px;
     text-align: center;
     color: white;
-    /* font-size: 25px; */
     background-color: #df4d70;
-    box-shadow: inset 3px 2px 14px -1px #6f1a2e;
 }
 .text-box h4{
     font-size: 15px;
     font-family: 'Abel', 'Open Sans', sans-serif;
 }
-#news-div{
-    width:70%;
+#news-div {
+    width: 85%;
 }
 #news{
     background-color: white;
@@ -446,7 +479,7 @@ header img{
     position: absolute;
     top:0;
     left: 0;
-    width:100%;
+    width:150%;
 }
 .news-article-info-box{
     position: absolute;
@@ -498,6 +531,9 @@ header img{
 /*
 *******************************************************PEOPLE & VACANCIES*******************
 */
+/*
+*******************************************************PEOPLE & VACANCIES*******************
+*/
 
 
 #staff-div{
@@ -508,21 +544,22 @@ header img{
     width:100%;
     margin: 10px 0;
     text-align: center;
-    display: inline-grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: grid;
 }
 .staff-profile{
-    width:60%;
+    width:70%;
     margin:10px auto;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    display: inline-grid;
+    grid-template-columns: 1fr 3fr;
 }
 .staff-profile img{
-    width:50%;
-    margin: 20px auto 40px auto;
+    width: 50%;
+    margin: 20px auto 0px auto;
     border-radius: 150px;
-    box-shadow: 0px 0px 3px 2px #0000004d;
+    box-shadow: 0px 0px 4px 1px #0000004d;
 }
 
 .staff-profile h4{
@@ -542,8 +579,16 @@ header img{
     font-weight: 100;
     color:#b7509f;
 }
-.staff-profile div{
-    width:100%;
+
+.staff-about{
+    width: 100%;
+    border-left: 1px solid #0000000d;
+    padding: 3em;
+}
+
+.staff-about p{
+    font-family: 'Open sans';
+    color: #00000099;
 }
 .staff-profile button{
     width:auto;
@@ -564,9 +609,13 @@ header img{
 #advisors h2{
     text-align: center;
 }
+
+/*
+*************************RECRUITMENT**********************************
+*/
 #recruitment{
     overflow: hidden;
-    background: linear-gradient(91deg,#23074157,#23074157,#df4d704a,#b7509f85);
+/*    background: linear-gradient(91deg,#23074157,#23074157,#df4d704a,#b7509f85);*/
     position: relative;
 }
 #recruitment img{
@@ -635,75 +684,101 @@ header img{
 
 
 #recruitment-div{
-    width:80%;
+    width:90%;
     margin: 0 auto;
     background-color: rgba(0,0,0,0);
 }
 
 #recruitment-container{
-    display: inline-grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: grid;
     margin: 20px 0;
     width: 100%;
 }
 
+
+
 .recruitment-box{
-    width:85%;
+    width: 85%;
     margin: 10px auto;
-    background-color: white;
-    border-radius: 10px;
-    font-family: 'Open sans condensed',sans-serif;
-    -webkit-box-shadow: 0 10px 10px -10px #ccc;
-    -moz-box-shadow: 0 10px 10px -10px #ccc;
-    box-shadow: 0 10px 10px -10px #ccc;
-    border-top: 1px solid #dadee8;
-    border-left: 1px solid #dadee8;
-    border-right: 1px solid #dadee8;
-    border-bottom: 1px solid #dadee8;
+    display: grid;
+    border: 1px solid #00000014;
+    border-radius: 5px;
 }
-.recruitment-box h2{
-    font-size: 1.1em;
-    background: linear-gradient(90deg, #b7509f, #57426f, #df4d70);
-    color:white;
-    padding: 5px;
-    border-radius: 10px 10px 0 0;
-    font-family: 'Abel', sans-serif;
-}
-.recruitment-box h5{
-    text-align: center;
-}
-.location-div{
-    display:inline-grid;
-    grid-template-columns: 5% 95%;
-    padding: 5px;
+.recruitment-details-box{
     width:100%;
-    text-align: center;
-}
-.location-div i{
-    margin: auto;
-    color:grey;
-}
-.location-div h5{
-    font-size: 0.8em;
-    padding: 5px;
-    color:grey;
-    text-align: center;
-}
-.recruitment-about-requirements-box{
-    width:100%;
-    font-size: 1.1em;
     display: inline-grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-    margin-top:10px;
-    border-top:1px solid grey;
-    border-radius: 1px;
+    grid-template-columns: 10% 30% 45% 15%;
 }
-.recruitment-about-requirements-box h5{
+.job-logo{
     padding: 5px;
+    padding-top: 15px;
 }
-.recruitment-about-requirements-box h5:nth-child(even){
-    border-left: 1px solid grey;
+.job-initials{
+    text-align: center;
+    background-color: #b8509f;
+    color: white;
+    width: 1.3em;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-family: 'Abel';
+    font-weight: 700;
+    margin: 0 auto;
+}
+.role-date{
+    padding:10px;
+    padding-top:15px;
+}
+.role-date h3,.role-date h5,.job-location h3,.job-location h5{
+    margin: 0;
+    font-family: 'Abel';
+    color:black;
+}
+.role-date h5,.job-location h5{
+    font-size: 1em;
+    color:#00000073;
+}
+
+.job-location{
+    padding:10px;
+    padding-top:15px;
+}
+.about-requirements{
+    padding:10px;
+    padding-top:15px;
+    display:block;
+    height:100%;
+}
+
+.about-requirements button{
+    width:90%;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor:pointer;
+    padding:5px;
+    text-align: center;
+    outline:none;
+    border:none;
+    color: white;
+    font-family:'Abel';
+}
+
+.job-about{
+    background-color: #e04e73;
+}
+
+.job-requirements{
+    background-color: #b8509f;
+}
+
+
+
+.recruitment-about{
+    padding:15px;
+    font-family: 'Abel';
+    display: none;
+}
+.recruitment-about h3{
+    font-family: 'Abel';
 }
 
 /*
@@ -1014,7 +1089,7 @@ footer div{
     font-family: 'Open sans condensed', 'Open sans', sans-serif;
 }
 #cohorts table{
-    width:80%;
+    width:70%;
     margin: 0 auto;
 }
 #cohorts table tr td{
@@ -1033,27 +1108,25 @@ footer div{
     display: flex;
 }
 
-#cohorts-info div{
+#cohorts-info div {
     width: 50%;
     color: black;
-    border: 1px solid gainsboro;
     margin: 25px;
-    border-radius: 5px;
     padding: 7px;
-    background-color: #00000008;
-    box-shadow: 0px 0px 1px 0px #00000061;
+    background-color: #f3f3f3;
 }
 
 #cohorts-info div h3{
     text-align: center;
+    font-family: 'Abel';
 }
 
 .row-color{
-    background-color: green;
+    background-color: #e04e73;
 }
 
 .default-row-color{
-    background-color: #f7cccc;
+    background-color: #230741;
 }
 .clear-box{
     background-color: rgba(0,0,0,0);
@@ -1151,18 +1224,39 @@ footer div{
     *************************TABLET PEOPLE AND VACANCIES***************************************
     */
     #staff-profiles{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
-    #recruitment img{
-        height:100%;
-        width:auto;
+    .staff-profile {
+        width: 100%;
     }
-    #recruitment-empty{
-        width:80%;
+    /*
+    *************************RECRUITMENT**********************************
+    */
+
+
+
+    .recruitment-box{
+        width: 90%;
+        margin: 10px auto;
+        display: grid;
+        border: 1px solid #00000014;
+        border-radius: 5px;
     }
-    #recruitment-container{
-        grid-template-columns: repeat(2, 1fr);
+    .recruitment-details-box{
+        width:100%;
+        display: grid;
+        grid-template-columns:1fr;
     }
+    .job-logo{
+        padding: 10px;
+        padding-top: 15px;
+    }
+
+    .about-requirements {
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
     /*
     *************************TABLET FOOTER***************************************
     */
@@ -1216,6 +1310,9 @@ footer div{
         height: 140%;
     }
     
+    .footer-info-box p {
+         margin-left: 0;
+    }
 }
 
 
@@ -1227,6 +1324,38 @@ footer div{
 
 @media only screen and (max-width: 600px) {
     
+    
+    /*
+    *****************************ABOUT***************************************
+    */
+    
+    #about-front-page {
+        width: 90%;
+        background-color: white; 
+        border: 1px solid #ffffff;
+        -webkit-box-shadow: none;
+         border-radius: 0; 
+        -moz-box-shadow:none;
+        box-shadow: none; 
+        margin: 0 auto;
+        font-family: 'Open sans condensed', sans-serif;
+    }
+    #about-front-page img {
+        width: 70%;
+        padding-right: 0;
+    }
+    #about-extra-box-div {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    
+    #work-packages {
+        width: 90%;
+    }
+    #work-packages img {
+        width: 100%;
+    }
     /*
     ***************************COHORTS*****************************
     */
@@ -1236,8 +1365,12 @@ footer div{
         width: 100%;
     }
     #cohorts-info div{
-        width: 70%;
+        width: 85%;
         margin: 25px auto;
+    }
+    #cohorts table {
+        width: 100%;
+        margin: 0 auto;
     }
     /*
     ****************************MENU MOBILE********************
@@ -1249,9 +1382,35 @@ footer div{
         display: block;
     }
     /*
+    *********************************LAUNCH*********************
+    */
+    .image-text {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .image-text:nth-child(odd) {
+        grid-template-columns: 1fr;
+    }
+    .image-text img:nth-child(odd) {
+         margin-left: 0;
+    }
+    .image-text img:nth-child(even) {
+         margin-left: 0;
+    }
+    #launch {
+        width: 90%;
+        border-radius: 5px;
+        margin: 0px auto;
+        background-color: white;
+        box-shadow: none;
+    }
+    /*
     ******************************NEWS*************************
     */
-    
+    #news-div {
+        width: 85%;
+    }
     .news-articles{
         grid-template-columns: repeat(2,1fr);
     }
@@ -1261,6 +1420,10 @@ footer div{
     #staff-profiles{
         display: grid;
         grid-template-columns:1fr;
+    }
+    .staff-profile {
+        display: grid;
+        grid-template-columns: 1fr;
     }
     #recruitment img{
         height:100%;

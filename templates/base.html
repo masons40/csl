@@ -1,5 +1,6 @@
 {% load staticfiles %}
-        
+{% load customfilters %}
+
 <!DOCTYPE html>
 <html>
     
@@ -83,14 +84,17 @@
 
                         <div class="footer-info-box">
                             <i class="fas fa-phone"></i>
-                            <p>+353 ........</p>
+                            {% for phone_number in phone_numbers %}
+                            <p>{{ phone_number.phone_number }}</p><br>
+                            {% endfor %}
                         </div>
 
                         <div class="footer-info-box">
                             <i class="fas fa-envelope"></i>
-                            <p>csl@ucd.ie<br>
-                                cslpreschools@ucd.ie
+                            {% for email in email_address %}
+                            <p>{{ email.email_address }}<br>
                             </p>
+                            {% endfor %}
                         </div>
                     </div>
                     <div id="footer-second-box">

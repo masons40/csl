@@ -42,4 +42,9 @@ $("document").ready(function(){
        $('#test-menu').slideToggle();
     });
     
+     $('.about-requirements button').on('click', function(){
+        val = $(this).attr('data-key');
+        $('div[data-key='+val+']').slideToggle();
+    });
+    
 })
